@@ -1,0 +1,38 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ronisi_app
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - mysql
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: ronisi_nginx
+    restart: unless-stopped
+    ports:
+      - "3006:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+  mysql:
+    image: mysql:8.4
+    container_name: ronisi_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ronisi
+      MYSQL_USER: ronisi
+      MYSQL_PASSWORD: ronisi_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - ronisi_mysql:/var/lib/mysql
+volumes:
+  ronisi_mysql:
