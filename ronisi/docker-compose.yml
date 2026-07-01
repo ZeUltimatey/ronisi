@@ -31,7 +31,7 @@ services:
       MYSQL_PASSWORD: ronisi_password
       MYSQL_ROOT_PASSWORD: root_password
     ports:
-      - "3307:3306"
+      - "3307:3307"
     volumes:
       - ronisi_mysql:/var/lib/mysql
 volumes:
