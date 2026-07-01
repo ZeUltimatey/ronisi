@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
   return <div className="min-h-screen bg-slate-950 text-white flex flex-col">
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        <Link href="/" className="font-black tracking-[0.22em] text-cyan-300">RONĪŠI 2025</Link>
+        <Link href="/" className="font-black tracking-[0.22em] text-cyan-300">RONĪŠI 2026</Link>
         <button className="rounded-lg border border-white/20 px-3 py-2 lg:hidden" onClick={() => setOpen(!open)}>Menu</button>
         <nav className="hidden items-center gap-1 lg:flex">
           {navGroups.map((g, i) => g.items ? <div key={g.label} className="relative" onMouseEnter={() => setActive(i)} onMouseLeave={() => setActive(null)}>
@@ -29,7 +29,7 @@ export default function MainLayout({ children }) {
     <main className="flex-1">{children}</main>
     <footer className="mt-24 border-t border-white/10 bg-slate-900/80">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
-        <div><h3 className="font-bold text-cyan-300">Seko līdzi</h3><p className="mt-3 text-white/75">RTU Rudens sporta spēļu “Ronīši” 2025 nolikums un aktualitātes.</p></div>
+        <div><h3 className="font-bold text-cyan-300">Seko līdzi</h3><p className="mt-3 text-white/75">RTU Rudens sporta spēļu “Ronīši” 2026 nolikums un aktualitātes.</p></div>
         <div><h3 className="font-bold text-cyan-300">Sazinies</h3><p className="mt-3 text-white/75">Santa Ābele<br/>sportaspeles.ronisi@rtusp.lv<br/>+371 26678395</p></div>
         <div><h3 className="font-bold text-cyan-300">Brauc ciemos</h3><p className="mt-3 text-white/75">RTU Konferenču un sporta centrs “Ronīši”<br/>Klapkalnciems, Latvija</p></div>
       </div>
