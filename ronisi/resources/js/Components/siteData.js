@@ -1,8 +1,6 @@
-export const imagePool = [
-  'https://lh3.googleusercontent.com/sitesv/AA5AbUC8FMFpWXD0XTdjs0GkZ0AOrN3H37rjXMGksqU05OB6awK5WCc1khHJUhZJexTtf_531A7BDAoBl8311FOuYbxqA88oJwjjcYISdd7cJYIIE0HfQ1ojgqtjwAQX4Nu1m-E-Hz0TASfeDViOH2qHDXRppNmQNC5vl_Cm7pNn6djfEvSyYUqWeovSk_j5npOZQYO8T6QVS4dk9M3rul13NeSdZqbIf_Fn_xIzAax0CQg=w1280',
-  'https://lh3.googleusercontent.com/sitesv/AA5AbUDf2zwVzQZeq2FpWX5i4RGZTdRujxpdhSn1sTT_UDFe2tYakk9BpmqqxzuXzr37OI3kyKegIMUABt6xvNJOmdG-7XToAtuWNciixS8lkwcumrriTi1pzpQboWkg0Zaul1wIfpAAHUOzrm0MM3BlvE4_08g25RSqjQknd-Qh_fZUGlVpho1_xgFNdZ9B255tfpSUpnobYJx_yUDQOPqcIx80c9xWOLXAy_hDJKE8r00=w1280',
-  'https://lh3.googleusercontent.com/sitesv/AA5AbUArlz6KlA0GaJ7WZceIEnwYzDUrJNFUxjoe-RaNYRJX_E9rGTgsWGuyQVqKccN6UpLd8gY9vfndYlcC2V1x21DV_fh92Ht-jORl3B6mx0tvL4xxsPx99eDvOFL9PmGDaLAXA6Xc-58Fb_TFsTxbMPNQhdGtDYOv_sJaoWBs0moPQDc6mE7Z5X6UcSnqrqlhKVEQ0pjXMNV8pqA83WvJf8r83fNE30M--fsY7bAXjnw=w1280'
-];
+import { imagePool } from './siteImages';
+
+export { imagePool };
 
 export const nav = [
   ['Sākums','/'],['Aktuālais','/aktualais'],['Kā sagatavoties','/ka-sagatavoties'],['Par mums','/par-mums'],['Atbalstītāji','/atbalstitaji'],['Organizatori','/organizatori'],['Galerija','/galerija'],['Pieteikšanās','/pieteiksanas/sporta-speles'],['Norise','/norise'],['Sporta veidi','/sporta-veidi'],['Teritorija','/teritorija'],['BUJ','/buj'],['Kontakti','/kontakti']
