@@ -11,7 +11,7 @@ export default function Map() {
         <img src="/images/map.jpg" alt="Ronīšu teritorijas karte" className="h-auto w-full rounded-2xl object-contain transition group-hover:scale-[1.01]" />
         <p className="px-2 pb-1 pt-3 text-sm text-slate-400">Atvērt karti pilnā izmērā</p>
       </a>
-      <aside className="rounded-3xl border border-white/10 bg-white/5 p-6"><h2 className="text-2xl font-bold">Svarīgās zonas</h2><ol className="mt-5 space-y-3">{zones.map((zone, i) => <li key={zone} className="flex gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-300 font-black text-slate-950">{i + 1}</span><span className="pt-0.5 text-slate-200">{zone}</span></li>)}</ol><p className="mt-6 text-sm leading-6 text-slate-400">Kartes marķējumus nepieciešams saskaņot ar organizatoru gala teritorijas plānu.</p></aside>
+      <aside className="rounded-3xl border border-white/10 bg-white/5 p-6"><h2 className="text-2xl font-bold">Svarīgās zonas</h2><ol className="mt-5 space-y-3">{zones.map((zone, i) => <li key={zone} className="flex gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-300 font-black text-slate-950">{i + 1}</span><span className="pt-0.5 text-slate-200">{zone}</span></li>)}</ol><p className="mt-6 text-sm leading-6 text-slate-400">ja rodas jautājumi par orientēšanos, lūdzu, sazinieties ar organizatoru.</p></aside>
     </div>
   </section></MainLayout>;
 }
