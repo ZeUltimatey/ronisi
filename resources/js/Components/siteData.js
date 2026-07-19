@@ -47,9 +47,9 @@ export const faq = [
 ];
 
 export const contacts = [
-  ['Galvenais tiesnesis','Santa Ābele','sportaspeles.ronisi@rtusp.lv','26678395'],
-  ['Galvenā tiesneša palīgs','Arvis Poplavskis','sportaspeles.ronisi@rtusp.lv','20404722'],
-  ['Dalībnieku koordinators','Emīlija Krastiņa','sportaspeles.ronisi@rtusp.lv','20223227'],
+  ['Galvenais tiesnesis','-','sportaspeles.ronisi@rtusp.lv','25650190'],
+  ['Galvenā tiesneša palīgs','-','sportaspeles.ronisi@rtusp.lv','25650190'],
+  ['Dalībnieku koordinators','-','sportaspeles.ronisi@rtusp.lv','25650190'],
 ];
 
 export const galleryLinks = [

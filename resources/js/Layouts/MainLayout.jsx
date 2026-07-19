@@ -40,7 +40,7 @@ export default function MainLayout({ children }) {
     <footer className="mt-24 border-t border-white/10 bg-slate-900/80">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
         <div><h3 className="font-bold text-cyan-300">Ronīši 2026</h3><p className="mt-3 text-white/70">RTU rudens sporta spēles, komandas gars un sacensības pie jūras.</p></div>
-        <div><h3 className="font-bold text-cyan-300">Sazinies</h3><p className="mt-3 text-white/70">sportaspeles.ronisi@rtusp.lv<br/>+371 26678395</p></div>
+        <div><h3 className="font-bold text-cyan-300">Sazinies</h3><p className="mt-3 text-white/70">sportaspeles.ronisi@rtusp.lv<br/>+371 25650190</p></div>
         <div><h3 className="font-bold text-cyan-300">Norises vieta</h3><p className="mt-3 text-white/70">RTU Konferenču un sporta centrs “Ronīši”<br/>Klapkalnciems, Latvija</p></div>
       </div>
     </footer>

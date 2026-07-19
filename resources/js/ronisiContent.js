@@ -14,10 +14,7 @@ export const navGroups = [
     { label: 'Karte', href: '/karte' },
     { label: 'Sporta veidi', href: '/sporta-veidi' },
   ]},
-  { label: 'Rezultāti', items: [
-    { label: 'Rezultāti', href: '/rezultati' },
-    { label: 'Tiesnešu sadaļa', href: '/tiesnesi' },
-  ]},
+  { label: 'Rezultāti', href: '/rezultati' },
   { label: 'BUJ', href: '/buj' },
   { label: 'Kontakti', href: '/kontakti' },
 ];
@@ -25,10 +22,10 @@ export const navGroups = [
 export const sports = ['Pludmales volejbols', 'Strītbols', 'Florbols', 'Tautas bumba', 'Futbols', 'Stafete', 'Lāzertags', 'Virves vilkšana'];
 
 export const winners = [
-  { year: 2025, team: 'Komanda tiks precizēta', note: 'Ievieto apstiprinātos vēsturiskos datus.' },
-  { year: 2024, team: 'Komanda tiks precizēta', note: 'Ievieto apstiprinātos vēsturiskos datus.' },
-  { year: 2023, team: 'Komanda tiks precizēta', note: 'Ievieto apstiprinātos vēsturiskos datus.' },
-  { year: 2022, team: 'Komanda tiks precizēta', note: 'Ievieto apstiprinātos vēsturiskos datus.' },
+  { year: 2025, team: '-', note: '-.' },
+  { year: 2024, team: '-', note: '-.' },
+  { year: 2023, team: '-', note: '-.' },
+  { year: 2022, team: '-', note: '-.' },
 ];
 
 export const timetable = [

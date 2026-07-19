@@ -10,12 +10,15 @@ use Inertia\Inertia;
 
 Route::get('/', fn () => Inertia::render('Home'))->name('home');
 
-Route::get('/aktualais', fn () => Inertia::render('ContentPage', ['pageKey' => 'news']))->name('news');
+Route::get('/aktualais', fn () => Inertia::render('News/Index'))->name('news');
+Route::get('/aktualais/{slug}', fn (string $slug) => Inertia::render('News/Show', ['slug' => $slug]))
+    ->where('slug', '[a-z0-9-]+')
+    ->name('news.show');
 Route::get('/ka-sagatavoties', fn () => Inertia::render('ContentPage', ['pageKey' => 'preparation']))->name('preparation');
 Route::get('/par-mums', fn () => Inertia::render('ContentPage', ['pageKey' => 'about']))->name('about');
-Route::get('/atbalstitaji', fn () => Inertia::render('ContentPage', ['pageKey' => 'supporters']))->name('supporters');
+Route::get('/atbalstitaji', fn () => Inertia::render('Supporters/Index'))->name('supporters');
 Route::get('/organizatori', fn () => Inertia::render('ContentPage', ['pageKey' => 'organizers']))->name('organizers');
-Route::get('/galerija', fn () => Inertia::render('Gallery'))->name('gallery');
+Route::get('/galerija', fn () => Inertia::render('Gallery/Index'))->name('gallery');
 Route::get('/sporta-veidi', fn () => Inertia::render('Sports'))->name('sports');
 Route::get('/buj', fn () => Inertia::render('FAQ'))->name('faq');
 Route::get('/kontakti', fn () => Inertia::render('Contacts'))->name('contacts');
@@ -38,13 +41,8 @@ Route::get('/rezultati', fn () => Inertia::render('SheetTable', [
     'title' => 'Rezultāti',
     'subtitle' => 'Komandu punkti un vietu sadalījums',
 ]))->name('results');
-Route::get('/tiesnesi', fn () => Inertia::render('SheetTable', [
-    'kind' => 'judges',
-    'title' => 'Tiesnešu sadaļa',
-    'subtitle' => 'Disciplīnu vērtējumi un piešķirtie punkti',
-]))->name('judges');
 Route::get('/dati/{kind}', [PublicSheetController::class, 'show'])
-    ->whereIn('kind', ['results', 'judges'])
+    ->whereIn('kind', ['results'])
     ->middleware('throttle:60,1')
     ->name('public-data.show');
 
