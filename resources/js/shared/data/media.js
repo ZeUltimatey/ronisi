@@ -14,10 +14,38 @@ export const highlightedGallery = [
 ];
 
 export const supporters = [
-  { id: 'rtu', name: 'Rīgas Tehniskā universitāte', logo: '/images/plakats.png', image: '/images/3.jpg', description: 'Galvenais pasākuma partneris un studentu sporta tradīciju atbalstītājs.' },
-  { id: 'red-bull', name: 'Red Bull', logo: '/images/redbull.png', image: '/images/9.jpg', description: 'Demo atbalstītāja ieraksts enerģijai, aktivitātēm un pasākuma pieredzei.' },
-  { id: 'ronisi', name: 'RTU centrs “Ronīši”', logo: '/images/karogs.jpg', image: '/images/18.jpg', description: 'Norises vieta pie jūras, kur sports satiek studentu kopienu.' },
-  { id: 'partneris', name: 'Demo partneris', logo: '/images/map.jpg', image: '/images/24.jpg', description: 'Vieta nākamā sponsora stāstam, piedāvājumam vai sadarbības aprakstam.' },
+    {
+        id: 'rtu',
+        name: 'Rīgas Tehniskā universitāte',
+        logo: '/images/plakats.png',
+        image: '/images/3.jpg',
+        website: 'https://www.rtu.lv',
+        description: 'Galvenais pasākuma partneris un studentu sporta tradīciju atbalstītājs.'
+    },
+    {
+        id: 'red-bull',
+        name: 'Red Bull',
+        logo: '/images/redbull.png',
+        image: '/images/9.jpg',
+        website: 'https://www.redbull.com',
+        description: 'Demo atbalstītāja ieraksts enerģijai, aktivitātēm un pasākuma pieredzei.'
+    },
+    {
+        id: 'ronisi',
+        name: 'RTU centrs “Ronīši”',
+        logo: '/images/karogs.jpg',
+        image: '/images/18.jpg',
+        website: 'https://www.rtu.lv/lv/ronisi',
+        description: 'Norises vieta pie jūras, kur sports satiek studentu kopienu.'
+    },
+    {
+        id: 'partneris',
+        name: 'Demo partneris',
+        logo: '/images/map.jpg',
+        image: '/images/24.jpg',
+        website: 'https://example.com',
+        description: 'Vieta nākamā sponsora stāstam, piedāvājumam vai sadarbības aprakstam.'
+    },
 ];
 
 export const newsPosts = [

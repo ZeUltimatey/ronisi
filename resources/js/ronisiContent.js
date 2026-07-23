@@ -28,15 +28,51 @@ export const winners = [
   { year: 2022, team: '-', note: '-.' },
 ];
 
-export const timetable = [
-  { time: '08:30–10:00', title: 'Ierašanās un reģistrācija', place: 'Informācijas punkts' },
-  { time: '10:00–10:20', title: 'Atklāšana un kapteiņu sapulce', place: 'Galvenā skatuve' },
-  { time: '10:30–13:30', title: 'Sporta disciplīnu 1. bloks', place: 'Sporta zonas' },
-  { time: '13:30–14:30', title: 'Pusdienu pārtraukums', place: 'Ēdināšanas zona' },
-  { time: '14:30–18:00', title: 'Sporta disciplīnu 2. bloks', place: 'Sporta zonas' },
-  { time: '18:30–19:15', title: 'Fināli', place: 'Galvenais laukums' },
-  { time: '20:00', title: 'Apbalvošana', place: 'Galvenā skatuve' },
-];
+export const timetable = {
+    '1. diena': [
+        {
+            time: '08:30–10:00',
+            title: 'Ierašanās un reģistrācija',
+            place: 'Informācijas punkts'
+        },
+        {
+            time: '10:00–10:20',
+            title: 'Atklāšana un kapteiņu sapulce',
+            place: 'Galvenā skatuve'
+        },
+        {
+            time: '10:30–13:30',
+            title: 'Sporta disciplīnu 1. bloks',
+            place: 'Sporta zonas'
+        },
+    ],
+
+    '2. diena': [
+        {
+            time: '09:00–10:00',
+            title: 'Komandu ierašanās',
+            place: 'Informācijas punkts'
+        },
+        {
+            time: '10:00–14:00',
+            title: 'Fināla spēles',
+            place: 'Galvenais laukums'
+        },
+        {
+            time: '18:00',
+            title: 'Noslēguma pasākums',
+            place: 'Galvenā skatuve'
+        },
+    ],
+
+    '3. diena': [
+        {
+            time: '10:00',
+            title: 'Brīvais laiks un aktivitātes',
+            place: 'Sporta zonas'
+        }
+    ]
+};
 
 // Legacy InfoPage atbalsts, lai Vite var droši nokompilēt arī vecās lapas.
 export const pages = {
