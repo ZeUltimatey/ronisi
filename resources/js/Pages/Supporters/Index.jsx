@@ -39,7 +39,7 @@ export default function SupportersIndex() {
                                             <img
                                                 src={supporter.logo}
                                                 alt={`${supporter.name} logotips`}
-                                                className="h-20 w-40 rounded-xl bg-white object-contain p-3 transition hover:scale-105"
+                                                className="max-h-24 w-full object-contain transition hover:scale-110"
                                             />
                                         </a>
                                     ) : (
@@ -84,7 +84,7 @@ export default function SupportersIndex() {
                         {supporters.map((supporter) => (
                             <div
                                 key={supporter.id}
-                                className="flex min-h-40 items-center justify-center rounded-2xl border border-white/10 bg-white p-5 transition hover:bg-white/90"
+                                className="flex min-h-40 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition hover:bg-white/10"
                             >
                                 {supporter.website ? (
                                     <a
@@ -98,7 +98,7 @@ export default function SupportersIndex() {
                                             src={supporter.logo}
                                             alt={`${supporter.name} logotips`}
                                             loading="lazy"
-                                            className="max-h-24 w-full object-contain transition hover:scale-110"
+                                            className="max-h-24 max-w-full object-contain transition hover:scale-110"
                                         />
                                     </a>
                                 ) : (
