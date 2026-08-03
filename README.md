@@ -33,3 +33,23 @@ php artisan migrate
 npm run build
 php artisan serve
 ```
+
+## Google Forms pieteikumi
+
+Dalībnieka un tiesneša pieteikumi ir atsevišķas lapas:
+
+- `/pieteiksanas/dalibnieks`
+- `/pieteiksanas/tiesnesis`
+
+Ievieto Google Forms pilnās `viewform` saites `.env` failā:
+
+```env
+GOOGLE_FORM_PARTICIPANT_URL=https://docs.google.com/forms/d/e/FORM_ID/viewform
+GOOGLE_FORM_JUDGE_URL=https://docs.google.com/forms/d/e/FORM_ID/viewform
+```
+
+Pilna Google Forms saite tiek automātiski pārveidota iegulšanai ar `embedded=true`. Saīsinātās `forms.gle` vai citas saites tiek atvērtas jaunā cilnē, jo tās ne vienmēr atļauj iframe iegulšanu. Pēc `.env` maiņas izpildi `php artisan config:clear`.
+
+## Piekļūstamības iestatījumi
+
+Poga `Aa` ir pieejama visās Inertia lapās. Tā ļauj mainīt valodu, teksta izmēru un kontrastu. Izvēle tiek saglabāta pārlūka `localStorage` atslēgā `ronisi-accessibility-settings-v1` un automātiski piemērota nākamajā apmeklējumā.

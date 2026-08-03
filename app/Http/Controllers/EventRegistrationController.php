@@ -8,9 +8,19 @@ use Inertia\Inertia;
 
 class EventRegistrationController extends Controller
 {
-    public function create()
+    public function create(string $type)
     {
-        return Inertia::render('Registration');
+        $forms = [
+            'dalibnieks' => config('services.google_forms.participant'),
+            'tiesnesis' => config('services.google_forms.judge'),
+        ];
+
+        abort_unless(array_key_exists($type, $forms), 404);
+
+        return Inertia::render('Registration', [
+            'formType' => $type,
+            'formUrl' => $forms[$type],
+        ]);
     }
 
     public function store(Request $request)

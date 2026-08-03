@@ -1,10 +1,122 @@
+import { Link } from '@inertiajs/react';
 import MainLayout from '../Layouts/MainLayout';
-import { useForm } from '@inertiajs/react';
-import { sports } from '../ronisiContent';
-export default function Registration(){
- const {data,setData,post,processing,errors,reset} = useForm({name:'',email:'',phone:'',team_name:'',organization:'',sports:[],participants_count:1,notes:''});
- const toggle = s => setData('sports', data.sports.includes(s) ? data.sports.filter(x=>x!==s) : [...data.sports, s]);
- const submit = e => {e.preventDefault(); post('/pieteiksanas', {onSuccess:()=>reset()});};
- return <MainLayout><section className="mx-auto max-w-4xl px-4 py-14 lg:px-8"><p className="font-bold tracking-[0.35em] text-cyan-300">PIETEIKŠANĀS</p><h1 className="mt-5 text-5xl font-black">Pieteikuma forma</h1><form onSubmit={submit} className="mt-10 grid gap-5 rounded-3xl border border-white/10 bg-white/5 p-6"><Input label="Vārds, uzvārds" value={data.name} onChange={v=>setData('name',v)} error={errors.name}/><Input label="E-pasts" value={data.email} onChange={v=>setData('email',v)} error={errors.email}/><Input label="Telefons" value={data.phone} onChange={v=>setData('phone',v)}/><Input label="Komandas nosaukums" value={data.team_name} onChange={v=>setData('team_name',v)}/><Input label="Organizācija / fakultāte" value={data.organization} onChange={v=>setData('organization',v)}/><label className="font-bold">Sporta veidi</label><div className="grid gap-3 sm:grid-cols-2">{sports.map(s=><button type="button" key={s} onClick={()=>toggle(s)} className={`rounded-xl border px-4 py-3 text-left ${data.sports.includes(s)?'border-cyan-300 bg-cyan-300/20':'border-white/10 bg-white/5'}`}>{s}</button>)}</div>{errors.sports&&<p className="text-red-300">{errors.sports}</p>}<Input label="Dalībnieku skaits" type="number" value={data.participants_count} onChange={v=>setData('participants_count',v)} error={errors.participants_count}/><label className="font-bold">Piezīmes</label><textarea className="rounded-xl border border-white/10 bg-slate-950 p-3" rows="5" value={data.notes} onChange={e=>setData('notes',e.target.value)} /><button disabled={processing} className="rounded-xl bg-cyan-300 px-6 py-3 font-black text-slate-950">Nosūtīt pieteikumu</button></form></section></MainLayout>
+import { useAccessibility } from '../Contexts/AccessibilityContext';
+
+function getEmbeddableGoogleFormUrl(formUrl) {
+  if (!formUrl) {
+    return null;
+  }
+
+  try {
+    const url = new URL(formUrl);
+    const isGoogleForm = url.hostname === 'docs.google.com' && url.pathname.includes('/forms/');
+
+    if (!isGoogleForm) {
+      return null;
+    }
+
+    url.searchParams.set('embedded', 'true');
+    return url.toString();
+  } catch {
+    return null;
+  }
 }
-function Input({label,value,onChange,error,type='text'}){return <div><label className="font-bold">{label}</label><input type={type} className="mt-2 w-full rounded-xl border border-white/10 bg-slate-950 p-3" value={value} onChange={e=>onChange(e.target.value)} />{error&&<p className="mt-1 text-red-300">{error}</p>}</div>}
+
+export default function Registration({ formType, formUrl }) {
+  const { t } = useAccessibility();
+  const isJudge = formType === 'tiesnesis';
+  const embedUrl = getEmbeddableGoogleFormUrl(formUrl);
+  const title = isJudge ? t('judgeForm') : t('participantForm');
+
+  return (
+    <MainLayout>
+      <section className="mx-auto max-w-6xl px-4 py-14 lg:px-8">
+        <p className="font-bold uppercase tracking-[0.35em] text-cyan-300">
+          {t('applications')}
+        </p>
+        <h1 className="mt-5 text-4xl font-black sm:text-5xl">{title}</h1>
+        <p className="mt-5 max-w-3xl text-lg text-white/70">
+          {t('chooseApplication')}
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3" aria-label={t('applications')}>
+          <Link
+            href="/pieteiksanas/dalibnieks"
+            className={`rounded-xl border px-5 py-3 font-bold transition ${
+              !isJudge
+                ? 'border-cyan-300 bg-cyan-300 text-slate-950'
+                : 'border-white/20 hover:bg-white/10'
+            }`}
+          >
+            {t('participant')}
+          </Link>
+          <Link
+            href="/pieteiksanas/tiesnesis"
+            className={`rounded-xl border px-5 py-3 font-bold transition ${
+              isJudge
+                ? 'border-cyan-300 bg-cyan-300 text-slate-950'
+                : 'border-white/20 hover:bg-white/10'
+            }`}
+          >
+            {t('judge')}
+          </Link>
+        </div>
+
+        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+          {embedUrl ? (
+            <>
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
+                <p className="text-sm text-white/65">{t('googleFormNotice')}</p>
+                <a
+                  href={formUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-white/20 px-4 py-2 text-sm font-bold hover:bg-white/10"
+                >
+                  {t('openFormNewTab')} ↗
+                </a>
+              </div>
+              <iframe
+                src={embedUrl}
+                title={`${title} — ${t('embeddedFormTitle')}`}
+                className="min-h-[75rem] w-full bg-white"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              >
+                {title}
+              </iframe>
+            </>
+          ) : formUrl ? (
+            <div className="p-8 text-center sm:p-12">
+              <h2 className="text-2xl font-black">{title}</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-white/70">
+                {t('googleFormNotice')}
+              </p>
+              <a
+                href={formUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex rounded-xl bg-cyan-300 px-6 py-3 font-black text-slate-950"
+              >
+                {t('openFormNewTab')} ↗
+              </a>
+            </div>
+          ) : (
+            <div className="p-8 text-center sm:p-12">
+              <h2 className="text-2xl font-black">{title}</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-white/70">
+                {t('formUnavailable')}
+              </p>
+              <a
+                href="mailto:sportaspeles.ronisi@rtusp.lv"
+                className="mt-7 inline-flex rounded-xl border border-white/20 px-6 py-3 font-bold hover:bg-white/10"
+              >
+                sportaspeles.ronisi@rtusp.lv
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+    </MainLayout>
+  );
+}

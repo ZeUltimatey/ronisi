@@ -23,11 +23,14 @@ Route::get('/sporta-veidi', fn () => Inertia::render('Sports'))->name('sports');
 Route::get('/buj', fn () => Inertia::render('FAQ'))->name('faq');
 Route::get('/kontakti', fn () => Inertia::render('Contacts'))->name('contacts');
 
-Route::get('/pieteiksanas', [EventRegistrationController::class, 'create'])->name('registration.create');
+Route::redirect('/pieteiksanas', '/pieteiksanas/dalibnieks')->name('registration.create');
+Route::get('/pieteiksanas/{type}', [EventRegistrationController::class, 'create'])
+    ->whereIn('type', ['dalibnieks', 'tiesnesis'])
+    ->name('registration.form');
 Route::post('/pieteiksanas', [EventRegistrationController::class, 'store'])
     ->middleware('throttle:10,1')
     ->name('registration.store');
-Route::redirect('/pieteiksanas/sporta-speles', '/pieteiksanas', 301);
+Route::redirect('/pieteiksanas/sporta-speles', '/pieteiksanas/dalibnieks', 301);
 Route::get('/pieteiksanas/pusdienas', fn () => Inertia::render('ContentPage', ['pageKey' => 'lunch']))->name('registration.lunch');
 Route::get('/pieteiksanas/naktsmitnes', fn () => Inertia::render('ContentPage', ['pageKey' => 'lodging']))->name('registration.lodging');
 

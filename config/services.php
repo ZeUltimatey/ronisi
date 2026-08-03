@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'google_forms' => [
+        'participant' => env('GOOGLE_FORM_PARTICIPANT_URL'),
+        'judge' => env('GOOGLE_FORM_JUDGE_URL'),
+    ],
+
 ];

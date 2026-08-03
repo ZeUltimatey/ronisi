@@ -1,22 +1,25 @@
 export const navGroups = [
-  { label: 'Sākums', href: '/' },
-  { label: 'Aktuālais', href: '/aktualais' },
-  { label: 'Par mums', items: [
-    { label: 'Par mums', href: '/par-mums' },
-    { label: 'Uzvarētāji', href: '/uzvaretaji' },
-    { label: 'Atbalstītāji', href: '/atbalstitaji' },
-    { label: 'Organizatori', href: '/organizatori' },
-    { label: 'Galerija', href: '/galerija' },
+  { label: { lv: 'Sākums', en: 'Home' }, href: '/' },
+  { label: { lv: 'Aktuālais', en: 'News' }, href: '/aktualais' },
+  { label: { lv: 'Par mums', en: 'About us' }, items: [
+    { label: { lv: 'Par mums', en: 'About us' }, href: '/par-mums' },
+    { label: { lv: 'Uzvarētāji', en: 'Winners' }, href: '/uzvaretaji' },
+    { label: { lv: 'Atbalstītāji', en: 'Supporters' }, href: '/atbalstitaji' },
+    { label: { lv: 'Organizatori', en: 'Organisers' }, href: '/organizatori' },
+    { label: { lv: 'Galerija', en: 'Gallery' }, href: '/galerija' },
   ]},
-  { label: 'Pieteikšanās', href: '/pieteiksanas' },
-  { label: 'Pasākums', items: [
-    { label: 'Laika plāns', href: '/laika-plans' },
-    { label: 'Karte', href: '/karte' },
-    { label: 'Sporta veidi', href: '/sporta-veidi' },
+  { label: { lv: 'Pieteikumi', en: 'Applications' }, items: [
+    { label: { lv: 'Dalībnieks', en: 'Participant' }, href: '/pieteiksanas/dalibnieks' },
+    { label: { lv: 'Tiesnesis', en: 'Judge' }, href: '/pieteiksanas/tiesnesis' },
   ]},
-  { label: 'Rezultāti', href: '/rezultati' },
-  { label: 'BUJ', href: '/buj' },
-  { label: 'Kontakti', href: '/kontakti' },
+  { label: { lv: 'Pasākums', en: 'Event' }, items: [
+    { label: { lv: 'Laika plāns', en: 'Schedule' }, href: '/laika-plans' },
+    { label: { lv: 'Karte', en: 'Map' }, href: '/karte' },
+    { label: { lv: 'Sporta veidi', en: 'Sports' }, href: '/sporta-veidi' },
+  ]},
+  { label: { lv: 'Rezultāti', en: 'Results' }, href: '/rezultati' },
+  { label: { lv: 'BUJ', en: 'FAQ' }, href: '/buj' },
+  { label: { lv: 'Kontakti', en: 'Contacts' }, href: '/kontakti' },
 ];
 
 export const sports = ['Pludmales volejbols', 'Strītbols', 'Florbols', 'Tautas bumba', 'Futbols', 'Stafete', 'Lāzertags', 'Virves vilkšana'];
