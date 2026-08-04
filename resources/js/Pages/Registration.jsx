@@ -2,13 +2,18 @@ import { Link } from '@inertiajs/react';
 import MainLayout from '../Layouts/MainLayout';
 import { useAccessibility } from '../Contexts/AccessibilityContext';
 
-function getEmbeddableGoogleFormUrl(formUrl) {
+const KNOWN_GOOGLE_FORM_URLS = {
+  'https://forms.gle/QbMi7hHMTENi6LWV7': 'https://docs.google.com/forms/d/e/1FAIpQLSfUYhxAu5_3v8S6iO71yQO7rtpNs720TPXIBkAH2t7-l3ieZA/viewform',
+};
+
+function getEmbeddableGoogleFormUrl(formUrl, language) {
   if (!formUrl) {
     return null;
   }
 
   try {
-    const url = new URL(formUrl);
+    const resolvedFormUrl = KNOWN_GOOGLE_FORM_URLS[formUrl] ?? formUrl;
+    const url = new URL(resolvedFormUrl);
     const isGoogleForm = url.hostname === 'docs.google.com' && url.pathname.includes('/forms/');
 
     if (!isGoogleForm) {
@@ -16,6 +21,7 @@ function getEmbeddableGoogleFormUrl(formUrl) {
     }
 
     url.searchParams.set('embedded', 'true');
+    url.searchParams.set('hl', language === 'en' ? 'en' : 'lv');
     return url.toString();
   } catch {
     return null;
@@ -23,9 +29,9 @@ function getEmbeddableGoogleFormUrl(formUrl) {
 }
 
 export default function Registration({ formType, formUrl }) {
-  const { t } = useAccessibility();
+  const { language, t } = useAccessibility();
   const isJudge = formType === 'tiesnesis';
-  const embedUrl = getEmbeddableGoogleFormUrl(formUrl);
+  const embedUrl = getEmbeddableGoogleFormUrl(formUrl, language);
   const title = isJudge ? t('judgeForm') : t('participantForm');
 
   return (
