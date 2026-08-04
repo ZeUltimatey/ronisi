@@ -31,7 +31,7 @@ export default function Sports() {
         <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {sports.map(([title, text], index) => (
             <article className="overflow-hidden rounded-3xl border border-white/10 bg-white/[.06]" key={title}>
-              <RemoteImage src={imagePool[index % imagePool.length]} className="h-36 rounded-none border-0" />
+              <RemoteImage className="h-36 rounded-none border-0" />
               <div className="p-5">
                 <h3 className="text-xl font-bold">{title}</h3>
                 <p className="mt-2 text-slate-300">{text}</p>
