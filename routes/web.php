@@ -16,7 +16,8 @@ Route::get('/aktualais/{slug}', fn (string $slug) => Inertia::render('News/Show'
     ->name('news.show');
 Route::get('/ka-sagatavoties', fn () => Inertia::render('ContentPage', ['pageKey' => 'preparation']))->name('preparation');
 Route::get('/par-mums', fn () => Inertia::render('ContentPage', ['pageKey' => 'about']))->name('about');
-Route::get('/atbalstitaji', fn () => Inertia::render('Supporters/Index'))->name('supporters');
+// Sadaļa uz laiku nav publiski pieejama.
+Route::get('/atbalstitaji', fn () => abort(404))->name('supporters');
 Route::get('/organizatori', fn () => Inertia::render('ContentPage', ['pageKey' => 'organizers']))->name('organizers');
 Route::get('/galerija', fn () => Inertia::render('Gallery/Index'))->name('gallery');
 Route::get('/sporta-veidi', fn () => Inertia::render('Sports'))->name('sports');
@@ -38,7 +39,8 @@ Route::get('/laika-plans', fn () => Inertia::render('Timetable'))->name('timetab
 Route::redirect('/norise', '/laika-plans', 301);
 Route::get('/karte', fn () => Inertia::render('Map'))->name('map');
 Route::redirect('/teritorija', '/karte', 301);
-Route::get('/uzvaretaji', fn () => Inertia::render('Winners'))->name('winners');
+// Sadaļa uz laiku nav publiski pieejama.
+Route::get('/uzvaretaji', fn () => abort(404))->name('winners');
 Route::get('/rezultati', fn () => Inertia::render('SheetTable', [
     'kind' => 'results',
     'title' => 'Rezultāti',

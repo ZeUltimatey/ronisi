@@ -3,8 +3,6 @@ export const navGroups = [
   { label: { lv: 'Aktuālais', en: 'News' }, href: '/aktualais' },
   { label: { lv: 'Par mums', en: 'About us' }, items: [
     { label: { lv: 'Par mums', en: 'About us' }, href: '/par-mums' },
-    { label: { lv: 'Uzvarētāji', en: 'Winners' }, href: '/uzvaretaji' },
-    { label: { lv: 'Atbalstītāji', en: 'Supporters' }, href: '/atbalstitaji' },
     { label: { lv: 'Organizatori', en: 'Organisers' }, href: '/organizatori' },
     { label: { lv: 'Galerija', en: 'Gallery' }, href: '/galerija' },
   ]},

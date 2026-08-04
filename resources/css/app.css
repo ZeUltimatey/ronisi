@@ -27,6 +27,16 @@ html[data-theme='light'] body {
     color: #0f172a;
 }
 
+/* Sākumlapas hero izmanto pielāgotu gradientu, tāpēc tam vajadzīgs atsevišķs gaišās tēmas fons. */
+html[data-theme='light'] .home-hero-background {
+    background: radial-gradient(circle at top left, rgb(34 211 238 / 0.18), transparent 38%),
+        linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+}
+
+html[data-theme='light'] .home-hero {
+    border-bottom: 1px solid rgb(15 23 42 / 0.1);
+}
+
 html[data-theme='light'] [class~='bg-slate-950'],
 html[data-theme='light'] [class~='bg-slate-950/95'],
 html[data-theme='light'] [class~='bg-slate-950/80'] {
