@@ -13,14 +13,14 @@ export const navGroups = [
   { label: { lv: 'Pasākums', en: 'Event' }, items: [
     { label: { lv: 'Laika plāns', en: 'Schedule' }, href: '/laika-plans' },
     { label: { lv: 'Karte', en: 'Map' }, href: '/karte' },
-    { label: { lv: 'Sporta veidi', en: 'Sports' }, href: '/sporta-veidi' },
+    { label: { lv: 'Nolikums', en: 'Regulations' }, href: '/sporta-veidi' },
   ]},
   { label: { lv: 'Rezultāti', en: 'Results' }, href: '/rezultati' },
   { label: { lv: 'BUJ', en: 'FAQ' }, href: '/buj' },
   { label: { lv: 'Kontakti', en: 'Contacts' }, href: '/kontakti' },
 ];
 
-export const sports = ['Pludmales volejbols', 'Virves vilkšana', 'Florbols', 'Strītbols', 'Pludmales handbols', 'Stafete', 'Individuālās disciplīnas'];
+export const sports = ['Pludmales volejbols', 'Strītbols', 'Florbols', 'Pludmales handbols', 'Futbols', 'Stafete', 'Rogainings', 'Virves vilkšana', 'Individuālās disciplīnas'];
 
 export const winners = [
   { year: 2025, team: '-', note: '-.' },

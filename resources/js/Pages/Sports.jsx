@@ -4,7 +4,7 @@ import { sports, imagePool } from '../Components/siteData';
 
 export default function Sports() {
   return (
-    <PageShell title="SPORTA VEIDI" subtitle="Iepazīsties ar disciplīnām un pasākuma nolikumu.">
+    <PageShell title="NOLIKUMS" subtitle="Iepazīsties ar pasākuma nolikumu un sporta veidiem.">
       <div className="mb-8 flex flex-wrap gap-3">
         <a
           href="https://ej.uz/ronisi_nolikums2026"
@@ -23,17 +23,23 @@ export default function Sports() {
           Regulations in English ↗
         </a>
       </div>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {sports.map(([title, text], index) => (
-          <article className="overflow-hidden rounded-3xl border border-white/10 bg-white/[.06]" key={title}>
-            <RemoteImage src={imagePool[index % imagePool.length]} className="h-36 rounded-none border-0" />
-            <div className="p-5">
-              <h2 className="text-xl font-bold">{title}</h2>
-              <p className="mt-2 text-slate-300">{text}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      <section className="mt-10" aria-labelledby="sports-heading">
+        <h2 id="sports-heading" className="text-3xl font-black">Sporta veidi</h2>
+        <p className="mt-3 max-w-3xl text-slate-300">
+          Komandu sastāva prasības katrai disciplīnai. Detalizēti noteikumi pieejami pasākuma nolikumā.
+        </p>
+        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {sports.map(([title, text], index) => (
+            <article className="overflow-hidden rounded-3xl border border-white/10 bg-white/[.06]" key={title}>
+              <RemoteImage src={imagePool[index % imagePool.length]} className="h-36 rounded-none border-0" />
+              <div className="p-5">
+                <h3 className="text-xl font-bold">{title}</h3>
+                <p className="mt-2 text-slate-300">{text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </PageShell>
   );
 }

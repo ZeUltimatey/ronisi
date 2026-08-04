@@ -3,7 +3,7 @@ import { imagePool } from './siteImages';
 export { imagePool };
 
 export const nav = [
-  ['Sākums','/'],['Aktuālais','/aktualais'],['Kā sagatavoties','/ka-sagatavoties'],['Par mums','/par-mums'],['Atbalstītāji','/atbalstitaji'],['Organizatori','/organizatori'],['Galerija','/galerija'],['Pieteikšanās','/pieteiksanas/sporta-speles'],['Norise','/norise'],['Sporta veidi','/sporta-veidi'],['Teritorija','/teritorija'],['BUJ','/buj'],['Kontakti','/kontakti']
+  ['Sākums','/'],['Aktuālais','/aktualais'],['Kā sagatavoties','/ka-sagatavoties'],['Par mums','/par-mums'],['Atbalstītāji','/atbalstitaji'],['Organizatori','/organizatori'],['Galerija','/galerija'],['Pieteikšanās','/pieteiksanas/sporta-speles'],['Norise','/norise'],['Nolikums','/sporta-veidi'],['Teritorija','/teritorija'],['BUJ','/buj'],['Kontakti','/kontakti']
 ];
 
 export const quickCards = [
@@ -29,13 +29,15 @@ export const pages = {
 };
 
 export const sports = [
-  ['Pludmales volejbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Virves vilkšana','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Florbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Strītbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Pludmales handbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Stafete','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
-  ['Individuālās disciplīnas','Detalizēti disciplīnu noteikumi pieejami nolikumā.']
+  ['Pludmales volejbols', '4 dalībnieki, vismaz 1 sieviete.'],
+  ['Strītbols', '3 dalībnieki, vismaz 1 sieviete.'],
+  ['Florbols', '3 dalībnieki, vismaz 1 sieviete.'],
+  ['Pludmales handbols', '4 dalībnieki, vismaz 1 sieviete.'],
+  ['Futbols', '4 dalībnieki, vismaz 1 sieviete.'],
+  ['Stafete', '8 dalībnieki, vismaz 2 sievietes.'],
+  ['Rogainings', '5 dalībnieki, vismaz 2 sievietes.'],
+  ['Virves vilkšana', '5 dalībnieki.'],
+  ['Individuālās disciplīnas', 'Vismaz 5 dalībnieki.']
 ];
 
 export const faq = [
@@ -45,7 +47,7 @@ export const faq = [
 ['Vai mājiņās ir silti?','Vasaras mājiņas ir dzestrākas, tāpēc iesakām paņemt pledu un džemperi.'],
 ['Vai tiks nodrošināts ēdiens?','Dalības maksā pusdienas nav iekļautas. Komandai būs iespēja pieteikt sestdienas pusdienas pēc apstiprinājuma.'],
 ['Vai teritorijā ir dušas un tualetes?','Jā, kempinga teritorijā dalībniekiem būs pieejamas dušas un labierīcības.'],
-['Kādi sporta veidi būs Ronīšos?','Pludmales volejbols, virves vilkšana, florbols, strītbols, pludmales handbols, stafete un individuālās disciplīnas.'],
+['Kādi sporta veidi būs Ronīšos?','Pludmales volejbols, strītbols, florbols, pludmales handbols, futbols, stafete, rogainings, virves vilkšana un individuālās disciplīnas.'],
 ['Ko darīt traumas gadījumā?','Jādodas pie Ronīšu medicīnas personāla.'],
 ['Vai drīkst peldēties?','Jā, bet katrs dalībnieks pats atbild par drošību ūdenī.'],
 ['Vai drīkst ņemt līdzi draugus?','Jā, atbalstītāji drīkst ierasties, bet viņiem netiek nodrošināta ēdināšana vai naktsmājas.'],
