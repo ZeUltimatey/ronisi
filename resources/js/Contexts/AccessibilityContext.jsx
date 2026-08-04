@@ -5,6 +5,7 @@ const DEFAULT_SETTINGS = {
   zoom: 100,
   language: 'lv',
   highContrast: false,
+  theme: 'system',
 };
 
 const messages = {
@@ -18,6 +19,10 @@ const messages = {
     textSize: 'Teksta izmērs',
     decreaseText: 'Samazināt teksta izmēru',
     increaseText: 'Palielināt teksta izmēru',
+    appearance: 'Vietnes izskats',
+    lightTheme: 'Gaišs',
+    darkTheme: 'Tumšs',
+    systemTheme: 'Sistēmas',
     contrast: 'Kontrasts',
     highContrast: 'Augsts kontrasts',
     normalContrast: 'Standarta kontrasts',
@@ -53,6 +58,10 @@ const messages = {
     textSize: 'Text size',
     decreaseText: 'Decrease text size',
     increaseText: 'Increase text size',
+    appearance: 'Website appearance',
+    lightTheme: 'Light',
+    darkTheme: 'Dark',
+    systemTheme: 'System',
     contrast: 'Contrast',
     highContrast: 'High contrast',
     normalContrast: 'Standard contrast',
@@ -96,6 +105,9 @@ function readStoredSettings() {
         : DEFAULT_SETTINGS.zoom,
       language: stored.language === 'en' ? 'en' : 'lv',
       highContrast: Boolean(stored.highContrast),
+      theme: ['light', 'dark', 'system'].includes(stored.theme)
+        ? stored.theme
+        : DEFAULT_SETTINGS.theme,
     };
   } catch {
     return DEFAULT_SETTINGS;
@@ -107,12 +119,27 @@ export function AccessibilityProvider({ children }) {
 
   useEffect(() => {
     const root = document.documentElement;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    root.lang = settings.language;
-    root.style.fontSize = `${settings.zoom}%`;
-    root.classList.toggle('accessibility-high-contrast', settings.highContrast);
+    const applySettings = () => {
+      const resolvedTheme = settings.theme === 'system'
+        ? (mediaQuery.matches ? 'dark' : 'light')
+        : settings.theme;
 
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+      root.lang = settings.language;
+      root.style.fontSize = `${settings.zoom}%`;
+      root.dataset.theme = resolvedTheme;
+      root.dataset.themePreference = settings.theme;
+      root.style.colorScheme = settings.highContrast ? 'dark' : resolvedTheme;
+      root.classList.toggle('accessibility-high-contrast', settings.highContrast);
+
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+    };
+
+    applySettings();
+    mediaQuery.addEventListener('change', applySettings);
+
+    return () => mediaQuery.removeEventListener('change', applySettings);
   }, [settings]);
 
   const value = useMemo(() => ({
@@ -121,6 +148,12 @@ export function AccessibilityProvider({ children }) {
       setSettings((current) => ({
         ...current,
         language: language === 'en' ? 'en' : 'lv',
+      }));
+    },
+    setTheme: (theme) => {
+      setSettings((current) => ({
+        ...current,
+        theme: ['light', 'dark', 'system'].includes(theme) ? theme : 'system',
       }));
     },
     increaseZoom: () => {

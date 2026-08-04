@@ -7,8 +7,10 @@ export default function AccessibilityToolbar() {
   const {
     zoom,
     language,
+    theme,
     highContrast,
     setLanguage,
+    setTheme,
     increaseZoom,
     decreaseZoom,
     toggleContrast,
@@ -40,7 +42,7 @@ export default function AccessibilityToolbar() {
           ref={panelRef}
           tabIndex={-1}
           aria-label={t('accessibility')}
-          className="w-[min(22rem,calc(100vw-2.5rem))] rounded-2xl border border-white/20 bg-slate-900 p-5 text-white shadow-2xl shadow-black/40 outline-none"
+          className="accessibility-panel w-[min(22rem,calc(100vw-2.5rem))] rounded-2xl border border-white/20 bg-slate-900 p-5 text-white shadow-2xl shadow-black/40 outline-none"
         >
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-lg font-black">{t('accessibility')}</h2>
@@ -95,6 +97,21 @@ export default function AccessibilityToolbar() {
             </fieldset>
 
             <fieldset>
+              <legend className="text-sm font-bold text-white/75">{t('appearance')}</legend>
+              <div className="mt-2 grid grid-cols-3 gap-2">
+                <SettingButton active={theme === 'light'} onClick={() => setTheme('light')}>
+                  ☀ {t('lightTheme')}
+                </SettingButton>
+                <SettingButton active={theme === 'dark'} onClick={() => setTheme('dark')}>
+                  ◐ {t('darkTheme')}
+                </SettingButton>
+                <SettingButton active={theme === 'system'} onClick={() => setTheme('system')}>
+                  ◉ {t('systemTheme')}
+                </SettingButton>
+              </div>
+            </fieldset>
+
+            <fieldset>
               <legend className="text-sm font-bold text-white/75">{t('contrast')}</legend>
               <button
                 type="button"
@@ -141,7 +158,7 @@ function SettingButton({ active, onClick, children }) {
       type="button"
       aria-pressed={active}
       onClick={onClick}
-      className={`rounded-xl border px-3 py-2.5 font-bold transition ${
+      className={`rounded-xl border px-2 py-2.5 text-sm font-bold transition ${
         active
           ? 'border-cyan-300 bg-cyan-300 text-slate-950'
           : 'border-white/20 bg-white/5 hover:bg-white/10'

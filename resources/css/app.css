@@ -7,6 +7,197 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body,
+#app {
+    min-height: 100%;
+}
+
+body {
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+/*
+ * Gaišais režīms.
+ * Publiskā vietne sākotnēji veidota ar tumšām Tailwind klasēm, tāpēc šeit
+ * tās tiek pārkartētas uz gaišu paleti, nemainot katru lapu atsevišķi.
+ */
+html[data-theme='light'] body {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+html[data-theme='light'] [class~='bg-slate-950'],
+html[data-theme='light'] [class~='bg-slate-950/95'],
+html[data-theme='light'] [class~='bg-slate-950/80'] {
+    background-color: #f8fafc !important;
+}
+
+html[data-theme='light'] [class~='bg-slate-900'],
+html[data-theme='light'] [class~='bg-slate-900/80'],
+html[data-theme='light'] [class~='bg-zinc-900'] {
+    background-color: #ffffff !important;
+}
+
+html[data-theme='light'] [class~='bg-white/5'],
+html[data-theme='light'] [class~='bg-white/10'],
+html[data-theme='light'] [class~='bg-white/[.03]'],
+html[data-theme='light'] [class~='bg-white/[.04]'],
+html[data-theme='light'] [class~='bg-white/[.06]'],
+html[data-theme='light'] [class~='bg-white/[.07]'] {
+    background-color: rgb(15 23 42 / 0.06) !important;
+}
+
+html[data-theme='light'] [class~='bg-cyan-300/10'],
+html[data-theme='light'] [class~='bg-cyan-300/15'] {
+    background-color: rgb(8 145 178 / 0.12) !important;
+}
+
+html[data-theme='light'] [class~='text-white'],
+html[data-theme='light'] [class~='text-white/85'],
+html[data-theme='light'] [class~='text-white/80'],
+html[data-theme='light'] [class~='text-white/75'],
+html[data-theme='light'] [class~='text-white/70'],
+html[data-theme='light'] [class~='text-white/65'],
+html[data-theme='light'] [class~='text-white/60'],
+html[data-theme='light'] [class~='text-white/55'],
+html[data-theme='light'] [class~='text-white/50'] {
+    color: #0f172a !important;
+}
+
+html[data-theme='light'] [class~='text-slate-200'],
+html[data-theme='light'] [class~='text-slate-300'] {
+    color: #334155 !important;
+}
+
+html[data-theme='light'] [class~='text-slate-400'],
+html[data-theme='light'] [class~='text-slate-500'] {
+    color: #475569 !important;
+}
+
+html[data-theme='light'] [class~='text-cyan-300'],
+html[data-theme='light'] [class~='text-cyan-200'] {
+    color: #0e7490 !important;
+}
+
+html[data-theme='light'] [class~='border-white'],
+html[data-theme='light'] [class~='border-white/10'],
+html[data-theme='light'] [class~='border-white/20'] {
+    border-color: rgb(15 23 42 / 0.18) !important;
+}
+
+html[data-theme='light'] [class~='border-cyan-300/20'],
+html[data-theme='light'] [class~='border-cyan-300/40'] {
+    border-color: rgb(8 145 178 / 0.35) !important;
+}
+
+html[data-theme='light'] .accessibility-panel {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: 0 24px 60px rgb(15 23 42 / 0.2) !important;
+}
+
+html[data-theme='light'] [class~='hover:bg-white/5']:hover,
+html[data-theme='light'] [class~='hover:bg-white/10']:hover {
+    background-color: rgb(15 23 42 / 0.1) !important;
+}
+
+html[data-theme='light'] [class~='hover:text-white']:hover {
+    color: #0f172a !important;
+}
+
+/* Saglabā baltu tekstu virs tumšajiem attēlu gradientiem. */
+html[data-theme='light'] [class*='bg-gradient-to-'] {
+    color: #ffffff;
+}
+
+html[data-theme='light'] [class*='bg-gradient-to-'] [class~='text-white'],
+html[data-theme='light'] [class*='bg-gradient-to-'] [class~='text-white/70'],
+html[data-theme='light'] [class*='bg-gradient-to-'] [class~='text-white/75'] {
+    color: #ffffff !important;
+}
+
+/*
+ * Tumšais režīms.
+ * Šie noteikumi pārklāj arī Laravel autentifikācijas un administrācijas lapu
+ * sākotnēji gaišās gray/white klases.
+ */
+html[data-theme='dark'] body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+html[data-theme='dark'] [class~='bg-gray-100'],
+html[data-theme='dark'] [class~='bg-gray-50'] {
+    background-color: #020617 !important;
+}
+
+html[data-theme='dark'] [class~='bg-white'] {
+    background-color: #0f172a !important;
+}
+
+html[data-theme='dark'] [class~='bg-gray-700'],
+html[data-theme='dark'] [class~='bg-gray-800'],
+html[data-theme='dark'] [class~='bg-gray-900'] {
+    background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] [class~='bg-indigo-50'],
+html[data-theme='dark'] [class~='bg-indigo-100'] {
+    background-color: rgb(49 46 129 / 0.35) !important;
+}
+
+html[data-theme='dark'] [class~='text-gray-900'],
+html[data-theme='dark'] [class~='text-gray-800'] {
+    color: #f8fafc !important;
+}
+
+html[data-theme='dark'] [class~='text-gray-700'],
+html[data-theme='dark'] [class~='text-gray-600'] {
+    color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] [class~='text-gray-500'],
+html[data-theme='dark'] [class~='text-gray-400'] {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] [class~='text-indigo-800'],
+html[data-theme='dark'] [class~='text-indigo-700'],
+html[data-theme='dark'] [class~='text-indigo-600'] {
+    color: #a5b4fc !important;
+}
+
+html[data-theme='dark'] [class~='border-gray-100'],
+html[data-theme='dark'] [class~='border-gray-200'],
+html[data-theme='dark'] [class~='border-gray-300'] {
+    border-color: rgb(255 255 255 / 0.18) !important;
+}
+
+html[data-theme='dark'] input,
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: rgb(255 255 255 / 0.25);
+}
+
+html[data-theme='dark'] input::placeholder,
+html[data-theme='dark'] textarea::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme='dark'] [class~='hover:bg-gray-100']:hover,
+html[data-theme='dark'] [class~='focus:bg-gray-100']:focus {
+    background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] [class~='hover:text-gray-700']:hover,
+html[data-theme='dark'] [class~='focus:text-gray-500']:focus {
+    color: #f8fafc !important;
+}
+
+/* Augsta kontrasta režīmam vienmēr ir prioritāte pār gaišo/tumšo tēmu. */
 html.accessibility-high-contrast body {
     background: #000 !important;
     color: #fff !important;
