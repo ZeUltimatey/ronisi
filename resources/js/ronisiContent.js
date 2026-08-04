@@ -22,7 +22,7 @@ export const navGroups = [
   { label: { lv: 'Kontakti', en: 'Contacts' }, href: '/kontakti' },
 ];
 
-export const sports = ['Pludmales volejbols', 'Strītbols', 'Florbols', 'Tautas bumba', 'Futbols', 'Stafete', 'Lāzertags', 'Virves vilkšana'];
+export const sports = ['Pludmales volejbols', 'Virves vilkšana', 'Florbols', 'Strītbols', 'Pludmales handbols', 'Stafete', 'Individuālās disciplīnas'];
 
 export const winners = [
   { year: 2025, team: '-', note: '-.' },

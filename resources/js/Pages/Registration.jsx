@@ -63,7 +63,11 @@ export default function Registration({ formType, formUrl }) {
         </div>
 
         <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
-          {embedUrl ? (
+          {!isJudge ? (
+            <div className="p-8 text-center sm:p-12">
+              <h2 className="text-2xl font-black">{t('participantFormOpening')}</h2>
+            </div>
+          ) : embedUrl ? (
             <>
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
                 <p className="text-sm text-white/65">{t('googleFormNotice')}</p>

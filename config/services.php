@@ -37,7 +37,7 @@ return [
 
     'google_forms' => [
         'participant' => env('GOOGLE_FORM_PARTICIPANT_URL'),
-        'judge' => env('GOOGLE_FORM_JUDGE_URL'),
+        'judge' => env('GOOGLE_FORM_JUDGE_URL', 'https://docs.google.com/forms/d/e/1FAIpQLSfUYhxAu5_3v8S6iO71yQO7rtpNs720TPXIBkAH2t7-l3ieZA/viewform?usp=send_form'),
     ],
 
 ];

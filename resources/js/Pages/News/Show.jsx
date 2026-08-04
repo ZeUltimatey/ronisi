@@ -21,6 +21,16 @@ export default function NewsShow({ slug }) {
         <div className="mt-10 space-y-6 text-lg leading-9 text-slate-300">
           {post.content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
+        {post.link && (
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex rounded-xl bg-cyan-300 px-6 py-3 font-black text-slate-950"
+          >
+            {post.linkLabel ?? 'Atvērt saiti'} ↗
+          </a>
+        )}
       </article>
     </MainLayout>
   );

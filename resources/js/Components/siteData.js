@@ -20,16 +20,22 @@ export const pages = {
   preparation: {title:'KĀ SAGATAVOTIES SPORTA SPĒLĒM?', subtitle:'Līdzi ņemamo mantu liste', blocks:[['Sporta spēles?','Mežs un pludmale? Ne īsti pārgājienu zābaki, ne peldkostīms ņemams. Vai varbūt tomēr abi? Ja arī Tu esi apjucis, ko tieši likt somā, mēs Tev palīdzēsim ar dažiem padomiem iz dzīves.'],['Uztrauc laikapstākļi?','Nekad nav nepiemērotu laikapstākļu, ir tikai nepiemērots apģērbs vai attieksme.'],['Komandas karogs','RONIS BEZ KAROGA – KĀ JŪRA BEZ VILŅIEM! Katras komandas gods un lepnums – jūsu KAROGS. Par karoga izveidi jūs iegūsiet +1 punktu kopvērtējumā.'],['Apģērbs','Apģērbs sportošanai, lietainam laikam, vakara ballei un dejām, cepure, saulesbrilles, peldkostīms un dvielis.'],['Ēdiens','Uzkodas, 1. dienas vakariņas, ūdens, tēja/kafija un ēšanas piederumi.'],['Gulēšana','Sava gultasveļa vai īre par 3 EUR. Vasaras namiņā labāk paņem vilnas zeķes, džemperi un guļammaisu.'],['Pārējais','Higiēnas preces, dvielis, odu atbaidīšanas līdzekļi un nepieciešamie medikamenti.']]},
   about: {title:'PAR MUMS', subtitle:'KAS IR RTU RUDENS SPORTA SPĒLES “RONĪŠI”?', blocks:[['Tradīcija','Rudens visiem Rīgas Tehniskās universitātes studentiem ir zināms kā ne tikai jauns mācību gada sākums, bet arī Ronīšu laiks.'],['Sagatavošanās','Studenti komplektē komandas, apgūst sporta veidus, apmeklē treniņus un gatavojas veiksmīgi startēt sporta spēlēs.'],['Vēsture','Sporta spēles pastāv jau no 1994. gada un ir iesakņojušās RTU tradīcijās. Mājas: RTU Konferenču un sporta centrs “Ronīši”.'],['Citāts','“Ronīši” - tā ir jūra, saule un vējš. “Ronīši” - tā ir brīvība, kustība un sports. “Ronīši” - tas ir priežu mežs un liedags.'],['Atmiņas','Sporta spēles saliedē studentus, popularizē aktīvu dzīves veidu un ļauj divu dienu garumā baudīt jūru. Atmiņas, kuras dzīvo!']]},
   supporters: {title:'ATBALSTĪTĀJI', subtitle:'Šeit būs 2026. gada atbalstītāju sadaļa', blocks:[['Atbalstītāji','Sadaļa sagatavota atbalstītāju logotipiem, aprakstiem un saitēm. Pievieno logotipus public/images/supporters un ierakstus datu failā.']]},
-  organizers: {title:'ORGANIZATORI', subtitle:'IEPAZĪSTIES AR ŠĪ GADA ORGANIZATORU KOMANDU!', blocks:[['Organizatoru komanda','Google Sites lapā izmantoti organizatoru foto. Šajā versijā jau ir izveidots režģis foto kartītēm. Kad bildes būs lokāli saglabātas, ieliec tās public/images/organizers.'],['Jautājumi','Sev interesējošus jautājumus vari uzdot kontaktu sadaļā.']]},
+  organizers: {title:'ORGANIZATORI', subtitle:'IEPAZĪSTIES AR ŠĪ GADA ORGANIZATORU KOMANDU!', blocks:[['Izstrādes procesā','Informācija par organizatoru komandu tiks publicēta vēlāk.']]},
   registration: {title:'SPORTA SPĒLES', subtitle:'Par pieteikšanos SPORTA SPĒLĒM', blocks:[['Komandu skaits','Maksimālais komandu skaits, kas var pieteikties sporta spēlēm, ir 32 komandas.'],['Pieteikšanās termiņš','Sporta spēļu pieteikšanās anketas tiek pieņemtas no 04.09.2026. plkst. 12.00 līdz 11.09.2026. plkst. 23.59.'],['Anketa','Pieteikšanās anketa: https://ej.uz/roni2026_pieteiksanas'],['Dalības maksa','Komandai EUR 100. Dalības maksā ietilpst dalība, brokastis 21. septembra rītā, pirmā medicīniskā palīdzība un apbalvojumi.'],['Svarīgi','Pusdienas šogad jāpiesaka atsevišķi. Vairāk informācijas: https://ej.uz/ronīši2026_nolikums']]},
   lunch: {title:'PUSDIENAS', subtitle:'Par pieteikšanos pusdienām', blocks:[['Informācija','Šogad pusdienas jāpiesaka atsevišķi pēc komandas pieteikuma apstiprināšanas. Komandas kapteinim informācija tiks nosūtīta e-pastā.']]},
   lodging: {title:'NAKTSMĪTNES', subtitle:'Par pieteikšanos NAKTSMĪTNĒM', blocks:[['Atlaide','Sporta spēļu dalībniekiem tiks nodrošināta atlaide mājiņu nomai RTU semināru, sporta un atpūtas bāzē “Ronīši” no 20.09.2026. līdz 21.09.2026.'],['Rezervācija','Katra komanda var rezervēt līdz 3 mājiņām. Naktsmītņu rezervācija notiks organizatoru veidotā sapulcē no 15.09.2026. līdz 18.09.2026.'],['Kārtība','Uz sapulci jāierodas vienam komandas pārstāvim. Izlozētais skaitlis noteiks apakšgrupu un mājiņas izvēles secību.']]},
-  schedule: {title:'NORISE', subtitle:'SPORTA SPĒĻU NORISE', blocks:[['Drīzumā','DRĪZUMĀ!! Šī sadaļa gatava programmai, laikiem un dienas kārtībai.']]},
-  area: {title:'TERITORIJA', subtitle:'NEGRIBI APMALDĪTIES TRĪS PRIEDĒS?', blocks:[['Karte','Jau drīzumā varēsi iepazīties ar “Ronīšu” karti!']]},
+  schedule: {title:'NORISE', subtitle:'SPORTA SPĒĻU NORISE', blocks:[['Izstrādes procesā','Detalizēts pasākuma laika plāns tiks publicēts vēlāk.']]},
+  area: {title:'TERITORIJA', subtitle:'NEGRIBI APMALDĪTIES TRĪS PRIEDĒS?', blocks:[['Izstrādes procesā','Pasākuma teritorijas karte tiks publicēta vēlāk.']]},
 };
 
 export const sports = [
-  ['Pludmales volejbols','4 dalībnieki, vismaz 1 sieviete'],['Strītbols','1 sieviete + 2 vīrieši'],['Florbols','1 sieviete + 2 vīrieši'],['Tautas bumba','2 sievietes + 3 vīrieši'],['Futbols','1 sieviete + 3 vīrieši'],['Stafete','8 dalībnieki, vismaz 2 sievietes'],['Lāzertags','6 dalībnieki, vismaz 2 sievietes'],['Virves vilkšana','5 dalībnieki']
+  ['Pludmales volejbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Virves vilkšana','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Florbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Strītbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Pludmales handbols','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Stafete','Detalizēti disciplīnas noteikumi pieejami nolikumā.'],
+  ['Individuālās disciplīnas','Detalizēti disciplīnu noteikumi pieejami nolikumā.']
 ];
 
 export const faq = [
@@ -39,7 +45,7 @@ export const faq = [
 ['Vai mājiņās ir silti?','Vasaras mājiņas ir dzestrākas, tāpēc iesakām paņemt pledu un džemperi.'],
 ['Vai tiks nodrošināts ēdiens?','Dalības maksā pusdienas nav iekļautas. Komandai būs iespēja pieteikt sestdienas pusdienas pēc apstiprinājuma.'],
 ['Vai teritorijā ir dušas un tualetes?','Jā, kempinga teritorijā dalībniekiem būs pieejamas dušas un labierīcības.'],
-['Kādi sporta veidi būs Ronīšos?','Pludmales volejbols, strītbols, florbols, tautasbumba, futbols, stafete, lāzertags un virves vilkšana.'],
+['Kādi sporta veidi būs Ronīšos?','Pludmales volejbols, virves vilkšana, florbols, strītbols, pludmales handbols, stafete un individuālās disciplīnas.'],
 ['Ko darīt traumas gadījumā?','Jādodas pie Ronīšu medicīnas personāla.'],
 ['Vai drīkst peldēties?','Jā, bet katrs dalībnieks pats atbild par drošību ūdenī.'],
 ['Vai drīkst ņemt līdzi draugus?','Jā, atbalstītāji drīkst ierasties, bet viņiem netiek nodrošināta ēdināšana vai naktsmājas.'],
@@ -47,9 +53,9 @@ export const faq = [
 ];
 
 export const contacts = [
-  ['Galvenais tiesnesis','-','sportaspeles.ronisi@rtusp.lv','25650190'],
-  ['Galvenā tiesneša palīgs','-','sportaspeles.ronisi@rtusp.lv','25650190'],
-  ['Dalībnieku koordinators','-','sportaspeles.ronisi@rtusp.lv','25650190'],
+  ['Galvenais tiesnesis','Francis Gulbis','','27573035'],
+  ['Galvenā tiesneša palīgs','Eduards Otomers','','20256011'],
+  ['Dalībnieku koordinators','Betija Eiduka','','25603992'],
 ];
 
 export const galleryLinks = [

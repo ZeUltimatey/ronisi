@@ -53,7 +53,7 @@ export default function MainLayout({ children }) {
     <footer className="mt-24 border-t border-white/10 bg-slate-900/80">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 lg:px-8">
         <div><h3 className="font-bold text-cyan-300">{t('footerEvent')}</h3><p className="mt-3 text-white/70">{t('footerEventText')}</p></div>
-        <div><h3 className="font-bold text-cyan-300">{t('contact')}</h3><p className="mt-3 text-white/70">sportaspeles.ronisi@rtusp.lv<br/>+371 25650190</p></div>
+        <div><h3 className="font-bold text-cyan-300">{t('contact')}</h3><p className="mt-3 text-white/70">sportaspeles.ronisi@rtusp.lv<br/>+371 25603992</p></div>
         <div><h3 className="font-bold text-cyan-300">{t('venue')}</h3><p className="mt-3 text-white/70">RTU Konferenču un sporta centrs “Ronīši”<br/>Klapkalnciems, Latvija</p></div>
       </div>
     </footer>

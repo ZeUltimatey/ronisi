@@ -7,7 +7,7 @@ export default function Organizers() {
       <Section eyebrow="Organizatori" title="Komanda aiz pasākuma">
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
           <p className="max-w-3xl text-lg leading-8 text-slate-300">
-            Šeit būs organizatoru saraksts, pienākumi un kontaktinformācija.
+            Sadaļa ir izstrādes procesā. Informācija par organizatoru komandu tiks publicēta vēlāk.
           </p>
         </div>
       </Section>
