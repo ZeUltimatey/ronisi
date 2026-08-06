@@ -137,13 +137,6 @@ export const pages = {
         title: { lv: 'Izstrādes procesā', en: 'In development' },
         text: { lv: 'Informācija par organizatoru komandu tiks publicēta vēlāk.', en: 'Information about the organising team will be published later.' },
       },
-      {
-        title: { lv: 'Organizācijas', en: 'Organisations' },
-        text: {
-          lv: 'Pasākumu organizē RTU Studentu parlaments un biedrība “Rīgas Tehniskās universitātes Studentu parlaments”.',
-          en: 'The event is organised by the RTU Student Parliament and the association “Riga Technical University Student Parliament”.',
-        },
-      },
     ],
   },
   lunch: {

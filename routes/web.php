@@ -39,8 +39,7 @@ Route::get('/laika-plans', fn () => Inertia::render('Timetable'))->name('timetab
 Route::redirect('/norise', '/laika-plans', 301);
 Route::get('/karte', fn () => Inertia::render('Map'))->name('map');
 Route::redirect('/teritorija', '/karte', 301);
-// Sadaļa uz laiku nav publiski pieejama.
-Route::get('/uzvaretaji', fn () => abort(404))->name('winners');
+Route::get('/uzvaretaji', fn () => Inertia::render('Winners'))->name('winners');
 Route::get('/rezultati', fn () => Inertia::render('SheetTable', [
     'kind' => 'results',
     'title' => 'Rezultāti',

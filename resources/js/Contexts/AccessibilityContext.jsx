@@ -144,7 +144,8 @@ export function AccessibilityProvider({ children }) {
       root.style.fontSize = `${settings.zoom}%`;
       root.dataset.theme = resolvedTheme;
       root.dataset.themePreference = settings.theme;
-      root.style.colorScheme = settings.highContrast ? 'dark' : resolvedTheme;
+      // keep color-scheme aligned with the resolved theme (high contrast will adjust visuals via CSS class)
+      root.style.colorScheme = resolvedTheme;
       root.classList.toggle('accessibility-high-contrast', settings.highContrast);
 
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));

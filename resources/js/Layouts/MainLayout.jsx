@@ -69,6 +69,9 @@ export default function MainLayout({ children }) {
           <div><h3 className="font-bold text-cyan-300">{t('contact')}</h3><p className="mt-3 text-white/70">sportaspeles.ronisi@rtusp.lv<br />+371 25603992</p></div>
           <div><h3 className="font-bold text-cyan-300">{t('venue')}</h3><p className="mt-3 text-white/70">{t('venueName')}<br />{t('venueLocation')}</p></div>
         </div>
+        <div className="mx-auto max-w-7xl px-4 pb-10 text-center">
+          <p className="mt-6 text-sm text-white/60">Developed by Edijs Aizgirevičs</p>
+        </div>
       </footer>
     </div>
   );

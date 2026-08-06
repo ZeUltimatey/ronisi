@@ -20,7 +20,9 @@ function getEmbeddableGoogleFormUrl(formUrl, language) {
       return null;
     }
 
-    url.searchParams.set('embedded', 'true');
+    // Do not force the compact embedded view — keep the full form URL so the form's
+    // own header and background are visible inside the iframe.
+    url.searchParams.delete('embedded');
     url.searchParams.set('hl', language === 'en' ? 'en' : 'lv');
     return url.toString();
   } catch {
@@ -89,7 +91,7 @@ export default function Registration({ formType, formUrl }) {
               <iframe
                 src={embedUrl}
                 title={`${title} — ${t('embeddedFormTitle')}`}
-                className="min-h-[75rem] w-full bg-white"
+                className="min-h-[75rem] w-full"
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
               >
