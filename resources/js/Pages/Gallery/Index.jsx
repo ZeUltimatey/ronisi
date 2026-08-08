@@ -134,16 +134,6 @@ export default function GalleryIndex() {
                         >
                           Skatīt albumu →
                         </a>
-                        {album.instagramProfile && (
-                          <a
-                            href={album.instagramProfile}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block rounded-lg bg-pink-500 px-4 py-2 text-sm font-bold text-white hover:bg-pink-600"
-                          >
-                            Instagram
-                          </a>
-                        )}
                       </div>
                     </div>
                   </div>

@@ -12,7 +12,7 @@ export default function Sports() {
     <PageShell title={pageLabels.regulationsTitle} subtitle={pageLabels.regulationsSubtitle}>
       <div className="mb-8 flex flex-wrap gap-3">
         <a
-          href="https://ej.uz/ronisi_nolikums2026"
+          href="https://ej.uz/ronisi2026_nolikums"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-xl bg-cyan-300 px-5 py-3 font-bold text-slate-950"
@@ -20,7 +20,7 @@ export default function Sports() {
           {text(pageLabels.regulationsLv)} ↗
         </a>
         <a
-          href="https://ej.uz/ronisi_regulations2026"
+          href="https://ej.uz/ronisi2026_regulations"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-xl border border-white/20 px-5 py-3 font-bold hover:bg-white/10"
